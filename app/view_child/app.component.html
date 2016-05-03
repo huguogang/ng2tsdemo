@@ -1,0 +1,9 @@
+<table border="1">
+  <tr>
+    <th><input type="checkbox" (click)="toggleAll()" [checked]="checked"/></th>
+    <th>ID</th>
+    <th>Make</th>
+    <th>Model</th>
+  </tr>
+  <tr *ngFor="#car of cars" [car]="car" class="my-row"></tr>
+</table>
