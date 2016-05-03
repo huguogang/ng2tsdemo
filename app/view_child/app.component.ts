@@ -8,7 +8,6 @@ import {Row} from "./row.component";
   directives: [Row]
 })
 export class AppComponent {
-
   checked: boolean = false;
   @ViewChildren(Row) rows: QueryList<Row>;
 
@@ -22,6 +21,7 @@ export class AppComponent {
     this.rows.forEach(row => isChecked = isChecked && row.checked);
     this.checked = isChecked;
   }
+  
   cars: any[] = [{
     "ID": 1,
     "Make": "Toyota",

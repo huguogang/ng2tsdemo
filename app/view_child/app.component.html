@@ -1,6 +1,6 @@
-Click the top checkbox will toggle all checkboxes.
-<br/>
-When all rows are checked, the top checkbox will change to checked.
+Click the top checkbox will toggle all checkboxes. This is achieved through children injection.
+<br/> When all rows are checked, the top checkbox will change to checked. This is achieves through combination of parent
+and child injection. 
 <table border="1">
   <tr>
     <th><input type="checkbox" (click)="toggleAll()" [checked]="checked" title="Click to toggle all checkboxes on or off" /></th>
