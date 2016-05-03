@@ -8,6 +8,7 @@ import {Car, JsonDataService} from './json_data.service';
   providers: [JsonDataService]
 })
 export class AppComponent implements OnInit {
+  // Will show up in UI through one-way binding
   cars: Car[];
 
   constructor(private _jsonDataService: JsonDataService) { }

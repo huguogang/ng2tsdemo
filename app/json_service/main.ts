@@ -4,6 +4,6 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 import {AppComponent} from './app.component';
 
 enableProdMode();
-// Http providers registered here.
+// Http providers registered here. It enables injection of HTTP in the service component.
 bootstrap(AppComponent, [HTTP_PROVIDERS])
   .catch(err => console.error(err));

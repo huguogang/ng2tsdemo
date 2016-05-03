@@ -12,7 +12,8 @@ export interface Car {
   Model: string 
 }
 
-@Injectable()
+@Injectable() // Makes this service available for injection.
+// Service that communicates with remote server to get JSON data.
 export class JsonDataService {
   car: Car[];
   
