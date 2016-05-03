@@ -1,6 +1,9 @@
+Click the top checkbox will toggle all checkboxes.
+<br/>
+When all rows are checked, the top checkbox will change to checked.
 <table border="1">
   <tr>
-    <th><input type="checkbox" (click)="toggleAll()" [checked]="checked"/></th>
+    <th><input type="checkbox" (click)="toggleAll()" [checked]="checked" title="Click to toggle all checkboxes on or off" /></th>
     <th>ID</th>
     <th>Make</th>
     <th>Model</th>
