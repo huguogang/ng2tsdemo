@@ -1,0 +1,27 @@
+<google-map 
+  [center]='center' 
+  [zoom]='zoom'
+  (click)='onMapClick($event)'></google-map>
+
+<!--
+  Input:
+    markers
+    center
+    polygons
+    init_config
+    kml_layer_url
+    heat_map_data
+    heat_map_config
+  Output:
+    click
+    center_changed
+    dblclick
+    drag
+    dragend
+    dragstart
+    zoom_changed
+    
+  Markers are directives too
+    position
+    (click)
+  -->
