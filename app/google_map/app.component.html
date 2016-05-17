@@ -1,27 +1,7 @@
-<google-map 
-  [center]='center' 
-  [zoom]='zoom'
-  (click)='onMapClick($event)'></google-map>
-
-<!--
-  Input:
-    markers
-    center
-    polygons
-    init_config
-    kml_layer_url
-    heat_map_data
-    heat_map_config
-  Output:
-    click
-    center_changed
-    dblclick
-    drag
-    dragend
-    dragstart
-    zoom_changed
-    
-  Markers are directives too
-    position
-    (click)
-  -->
+<form action="">
+  <em>Click Action:</em><br/>
+  <label><input (click)="clickAction='drawMarker'" type="radio" checked=true name="clickAction" value="drawMarker"> Draw Marker</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label><input (click)="clickAction='drawHeatmap'" type="radio" name="clickAction" value="drawHeatmap"> Draw Heatmap</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label><input (click)="clickAction='setCenter'" type="radio" name="clickAction" value="setCenter"> Set Center</label>
+</form>
+<google-map [center]='center' [zoom]='zoom' (mapClick)='onMapClick($event)' [markers]='markers' [heatmapData]='heatmapData'></google-map>

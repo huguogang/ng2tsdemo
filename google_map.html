@@ -43,7 +43,7 @@
         var scriptElement = document.createElement("script");
         scriptElement.async = true;
         scriptElement.src = "https://maps.googleapis.com/maps/api/js?key=" +
-        s.Secrets.GOOGLE_API_KEY + "&libraries=visualization&libraries=places&callback=onMapInit";
+        s.Secrets.GOOGLE_API_KEY + "&libraries=visualization,places&callback=onMapInit";
         var script0 = document.getElementsByTagName('script')[0];
         script0.parentNode.insertBefore(scriptElement, script0);
       },
