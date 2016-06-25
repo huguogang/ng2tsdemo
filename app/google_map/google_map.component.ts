@@ -97,9 +97,12 @@ export class GoogleMap implements OnInit {
      *   1. Use fat arrow notation, then "this" is the class itself
      *   2. "NgZone.run" will run code block in Angular Zone, thus restore change detection
      */
-    this.map.addListener('click', (e: google.maps.MouseEvent) => {
-      this._ngZone.run(() =>
-        this.mapClick.emit(e.latLng));
+    this.map.addListener('click',
+      // Lamda to the rescue, it will automatically capture this 
+      (e: google.maps.MouseEvent) => {
+        // Run event handler in Angular Zone, so that change detection will work
+        this._ngZone.run(() =>
+          this.mapClick.emit(e.latLng));
     });
 
     this._heatmap = new google.maps.visualization.HeatmapLayer({
